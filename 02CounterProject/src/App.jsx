@@ -14,7 +14,6 @@ function App() {
         console.log(`Clicked | Counter = ${counter}`)
     }
     
-    
     const subtractOne = () => { 
         if(counter <= 0){
             console.log(`Clicked | Counter can't be less than or equal to 0`)
