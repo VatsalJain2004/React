@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 const App = () => {
 
-    const [length, setLength] = useState(8)
+    const [length, setLength] = useState(6)
     const [password, setPassword] = useState("")
     const [numAllowed, setNumAllowed] = useState(false)
     const [charAllowed, setCharAllowed] = useState(false)
@@ -33,7 +33,8 @@ const App = () => {
             console.log(password)
             setPassword(pass)
         },
-        [length, setPassword, numAllowed, charAllowed]
+        [length, numAllowed, charAllowed]
+        //setPassword can also be included in this dependency array
     )
     
     const copyPasswordToClipboard = useCallback(
